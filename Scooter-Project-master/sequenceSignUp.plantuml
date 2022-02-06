@@ -1,0 +1,25 @@
+@startuml
+
+title "Scooter - Sequence Diagram for Signing Up"
+
+actor Customer
+
+Customer -> App_UI : input EmailAddress
+App_UI -> App_API : isValidSyntax(emailAddress)
+App_API -> Database : checkAddress(address)
+
+
+
+App_API -> Database : if (validAddress) Sign Up
+App_API -> App_UI : if (!validAddress) invalidAddress
+
+Database -> App_API : Signup Successful
+App_API -> App_UI : Signup Successful
+
+
+database Database
+
+
+
+App_UI --> Customer: logIn User
+@enduml

@@ -1,0 +1,128 @@
+    <link rel="stylesheet" href="/css/managing.css">
+  <section id="title">
+    <div class="container-fluid">
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="http://localhost:3000/restaurants">Reliverdoo</a>
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:3000/restaurants">Account</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:3000/restaurants#recyclerView">Restaurants</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <h1 class="res-name">Managing Restaurants</h1>
+    </div>
+  </section>
+
+
+  <!-- Try Form -->
+
+
+      <!-- RecyclerView -->
+
+      <section id="recyclerView">
+        <div class="recyclerView-container">
+          <div class="row" id="recyclerView-row">
+            <div class="col-lg-6 col-sm-12 mcard">
+              <h2 class="menu-title">Create</h2>
+                  <div class="filter-card">
+                  <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                  <div class="form-container">
+                  <form autocomplete="off" id="f1" name="form1" onsubmit="cSubmitted()" action="/restaurants" method="POST">
+                    <div class="row" id="rowOne">
+                      <div class="col-12">
+                        <select class="form-control" id="c0">
+                          <option value="1">Restaurant</option>
+                          <option value="2">Menu</option>
+                          <option value="3">Menu Item</option>
+                        </select>
+                      </div>
+                      <div class="col-12">
+                        <input type="text" name="name" class="form-control" placeholder="Restaurant name">
+                      </div>
+                      <div class="col-12" id="x">
+                        <input type="text" name="image" class="form-control" placeholder="Image URL">
+                      </div>
+                      <div class="col-12">
+                        <button class="btn btn-outline-dark btn-lg manage-btn type="submit" value="Submit">Create</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                </div>
+                  </div>
+              </div>
+            <div class="col-lg-6 col-sm-12 mcard">
+              <h2 class="menu-title">Update</h2>
+                  <div class="filter-card">
+                  <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                  <div class="form-container">
+                  <form autocomplete="off" id="f2" name="form2" onsubmit="uSubmitted()" action="/restaurants/:id/update" method="POST">
+                    <div class="row" id="rowOne">
+                      <div class="col-12">
+                        <select class="form-control" id="u0">
+                          <option value="1">Restaurant</option>
+                          <option value="2">Menu</option>
+                          <option value="3">Menu Item</option>
+                        </select>
+                      </div>
+                      <div class="col-12">
+                        <input type="text" id="uid" name="id" class="form-control" placeholder="Id">
+                      </div>
+                      <div class="col-12">
+                        <input type="text" name="name" class="form-control" placeholder="Restaurant name">
+                      </div>
+                      <div class="col-12" id="y">
+                        <input type="text" name="image" class="form-control" placeholder="Image URL">
+                      </div>
+                      <div class="col-12">
+                        <button class="btn btn-outline-dark btn-lg manage-btn type="submit" value="Submit">Update</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                </div>
+                  </div>
+              </div>
+                <div class="col-lg-6 col-sm-12 mcard">
+                  <h2 class="menu-title">Delete</h2>
+                      <div class="filter-card">
+                      <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                      <div class="form-container">
+                      <form autocomplete="off" id="f3" name="form3" onsubmit="dSubmitted()" action="/restaurants/:id" method="POST">
+                        <div class="row" id="rowOne">
+                          <div class="col-12">
+                            <select class="form-control" id="d0">
+                              <option value="1">Restaurant</option>
+                              <option value="2">Menu</option>
+                              <option value="3">Menu Item</option>
+                            </select>
+                          </div>
+                          <div class="col-12">
+                            <input id="d1" type="text" name="id" class="form-control" placeholder="Id">
+                          </div>
+                          </div>
+                          <div class="col-12">
+                            <button class="btn btn-outline-dark btn-lg manage-btn type="submit" value="Submit">Delete</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    </div>
+                      </div>
+                  </div>
+          </div>
+        </div>
+    </section>
+      <script src="/js/managing.js" type="text/javascript"></script>

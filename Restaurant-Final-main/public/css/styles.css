@@ -1,0 +1,214 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+#title {
+  background-color: #fff;
+  color: #fff;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Poppins';
+font-weight: 600;
+color: #000;
+}
+
+p {
+  color: #8f8f8f;
+}
+
+.container-fluid {
+  padding: 1% 5% 0;
+}
+
+/* Headings */
+
+.big-heading {
+  font-size: 3.5rem;
+  text-align: left;
+}
+
+.see-other-res {
+  text-align: left;
+  color: #4E4E4E;
+}
+
+.section-heading {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+/* Navigation Bar */
+
+.navbar {
+  padding: 0 0 1rem;
+}
+
+.navbar-brand {
+  font-family: 'Croissant One', ubuntu;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #C8161D;
+}
+
+  .navbar-brand:hover {
+    color: #BA0B12;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(200,22,29)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  color: #C8161D;
+  border-color: #C8161D;
+} 
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  color: #C8161D;
+}
+
+.nav-link:hover {
+  color: #BA0B12;
+}
+
+/* Manage Restaurant btn */
+
+.manage-btn {
+  margin: 5% 3% 5% 0;
+  width: 100%;
+  height: 5rem;
+  font-size: 1.5rem;
+}
+
+.location-icon {
+  color: #BA0B12;
+}
+
+/* Filtering item Section */
+
+.filter-container {
+  padding: 0 5% 3%;
+  width: 100%;
+}
+.filter-card {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  border-radius: 25px;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: 0.5s ease;
+}
+
+.filter-img-cont {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  margin: 40px auto 30px;
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.filter-img {
+  height: 60px;
+  width: 60px;
+}
+
+.filter-main-text {
+  padding: 0 0 20px;
+  text-align: center;
+}
+.filter-main-text .filter-h2 {
+  color: #302e2e;
+  margin: 20px 0 40px;
+}
+
+.black-chevron {
+  width: 50px;
+  height: 50px;
+  color: #000;
+  padding: 0 10px;
+}
+
+.white-chevron {
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  padding: 0 10px;
+}
+
+.fcard:hover .black-chevron,
+.fcard .white-chevron {
+    display: none;
+}
+.fcard:hover .white-chevron {
+    display: inline-block;
+}
+
+.fcard:hover .filter-h2 {
+  color: #ddd;
+}
+
+.fcard:hover {
+  background-color: #C8161D;
+}
+
+/* RecyclerView Section */
+
+.recyclerView-container {
+  padding: 0 5% 5%;
+  width: 100%;
+}
+
+.recyclerView-title {
+  padding: 5% 5%;
+  text-align: left;
+}
+
+.rec-h2 {
+  color: #302e2e;
+  margin: 20px 0 40px;
+  font-family: 'Montez', cursive;
+  font-size: 3rem;
+}
+
+.rcard {
+  transition: 0.5s ease;
+}
+
+.rcard:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.rec-img img{
+  height: 200px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  width: 100%;
+}
+
+/* Footer */
+
+#footer {
+  padding: 7% 15%;
+}
+
+.social-icon {
+  margin: 20px 10px;
+}

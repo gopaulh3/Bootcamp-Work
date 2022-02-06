@@ -1,0 +1,22 @@
+{
+  "name": "webserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.5",
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "express-validator": "^6.14.0",
+    "handlebars": "^4.7.7",
+    "sequelize": "^6.13.0",
+    "sqlite3": "^5.0.2"
+  }
+}

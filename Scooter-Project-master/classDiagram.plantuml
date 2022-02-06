@@ -1,0 +1,95 @@
+@startuml classDiagram
+
+title Scooter Hire - Class Diagram
+
+
+Customer <|-- Account
+
+interface Account {
+  fullName : string
+  emailAddress : string
+  age : Number
+  driversNo : string
+  driversImageURL : string
+}
+
+
+class Scooter {
+  batteryLife : number
+  speedInMPH : number
+  scooterGPSPosition : GPSCoordinatess
+  QRCode : number
+  isFullyCharged() : boolean
+
+}
+
+class CustomerService {
+  static isBankDetailsVerified()
+  static isDriversLicenseVerified(): boolean
+  static async takePayment()
+}
+
+class Validator {
+ private static validateEmail : RegExp
+  private static validateDriverNo : RegExp
+  private static validateName : RegExp
+  private static validBanks : string[]
+  private static validCardNumber : RegExp
+  
+  isValidBankName()
+  isValidCardNo()
+  isValidFullName()
+  isValidCvv()
+  isValidEmailAddress()
+  isOver18()
+  isValidDriversNo()
+}
+
+class Customer {
+  fullName: string;
+  emailAddress: string;
+  age: Number;
+  driversNo: string;
+  driversImageURL: string;
+  bankDetails: BankDetails;
+  accountInfoValid() : boolean
+  bankDetailsAdded() : boolean
+}
+
+class ScooterHire {
+    customer : Customer;
+    scootersAvailable : Scooter[]
+    scooterChosen : Scooter;
+    map : GPSCoordinates;
+    scooterRiddenTime : number;
+    private areDetailsValidated : boolean;
+    
+    isScooterAvailable()
+    retrieveScooterSuccessful() : boolean
+    rideScooter() 
+    private async updateGPSPosition() 
+    private isWithinRange() 
+    async chargeScooter()
+    returnScooterSuccessful() 
+}
+
+
+
+class GPSCoordinates {
+  longitude: Number;
+  latitude: Number;
+  mapAreaCoordinates : GPSCoordinates[];
+  
+  mapCoordinates() : GPSCoordinates[];
+}
+
+ScooterHire o-- Validator
+ScooterHire o-- Scooter
+ScooterHire o-- GPSCoordinates
+Scooter o-- GPSCoordinates
+ScooterHire o-- Customer
+ScooterHire o-- CustomerService
+
+Customer "1" -up-> "1..*" CustomerService : Uses
+
+@enduml

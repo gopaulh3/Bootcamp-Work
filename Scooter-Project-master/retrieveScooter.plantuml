@@ -1,0 +1,17 @@
+@startuml
+
+title "Scooter - Sequence Diagram for Retrieving Scooter"
+
+actor Customer
+
+Customer -> App_UI : request scooter retrieval
+App_UI -> Database : isValidEmail(emailAddress)
+App_UI -> Database : isOver18(age)
+App_UI -> Database : isValidDriverLicense(driversLicense)
+App_UI -> Database : isAccountInfoValid(customer)
+Database -> App_UI : true
+App_UI --> Customer: Scooter retrieval successful
+
+database Database
+
+@enduml

@@ -1,0 +1,54 @@
+@startuml
+title Scooter Hire - Use Case Diagram
+
+left to right direction
+skinparam actorStyle awesome
+package Actors {
+  actor "Customer-service" as cs
+  actor Customer as g
+  actor Bank as b
+  actor Google as goog
+
+}
+package App {
+  usecase "Download-app" as UC1
+  usecase "Signup-or-Login" as UC2
+  usecase "Input-Payment-details" as UC3
+  usecase "Verify-age" as UC10
+  usecase "Scan-QR-Code" as UC4
+  usecase "Raise-complaint" as UC9
+  usecase "Make payment" as UC11
+  usecase "Open-maps" as UC12
+
+
+}
+
+package Scooter {
+  usecase "Retrieve-scooter" as UC5
+  usecase "Ride-scooter" as UC6
+  usecase "Charge-scooter" as UC7
+  usecase "Return-scooter" as UC8
+}
+
+note right of App : Customer's first use case System.
+note right of Scooter : Customer's Second use case System.
+
+g --> UC4
+g --> UC10
+g --> UC11
+g --> UC9
+UC9 --> cs #line:green;
+UC10 --> cs #line:green;
+
+UC11 --> b #line:orange;
+goog --> UC12 #line:black : via API
+
+g --> UC1
+g --> UC2
+g --> UC3
+g --> UC5 #line:blue;
+
+g --> UC6 #line:blue;
+g --> UC7 #line:blue;
+g --> UC8 #line:blue;
+@enduml
